@@ -78,49 +78,6 @@ function RefreshDashboardData() {
                                 }
 
                                 $('#desc_' + vlabel).html(vdesc);
-                                if (typeof vchart != 'undefined') {
-
-                                    $('#' + vchart).highcharts({
-                                        chart: {
-                                            margin: [30, 30, 30, 30],
-                                            backgroundColor: null,
-                                            plotBackgroundColor: 'none',
-                                        },
-                                        credits: {
-                                            enabled: false
-                                        },
-                                        title: {
-                                            text: null
-                                        },
-                                        tooltip: {
-                                            formatter: function() {
-                                                return this.point.name + ': ' + this.y + ' %';
-                                            }
-                                        },
-                                        series: [{
-                                            borderWidth: 2,
-                                            borderColor: '#F1F3EB',
-                                            shadow: false,
-                                            type: 'pie',
-                                            name: 'Income',
-                                            innerSize: '65%',
-                                            data: [{
-                                                name: vdesc,
-                                                y: parseInt(vdata),
-                                                color: vchartcolor
-                                            }, {
-                                                name: 'total',
-                                                y: (100 - vdata),
-                                                color: '#3d3d3d'
-                                            }],
-                                            dataLabels: {
-                                                enabled: false,
-                                                color: '#000000',
-                                                connectorColor: '#000000'
-                                            }
-                                        }]
-                                    });
-                                }
                             }
                         }
                     }

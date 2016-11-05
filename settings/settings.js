@@ -1,5 +1,5 @@
 // Settings
-$.domoticzurl = "http://192.168.1.88:8080";//domoticz url (can be with username:password@ip:port)
+$.domoticzurl = "http://192.168.1.90:8080";//domoticz url (can be with username:password@ip:port)
 $.degreesUnit = " C";
 $.percentUnit = " %";
 $.theme = "main.css"; //possible values: 'main.css', 'mainPurple.css', 'mainLight.css'
@@ -8,13 +8,13 @@ $.rss = "http://www.nu.nl/rss/Algemeen"; //rss feed, like: http://feeds.bbci.co.
 $.enableSwitchPopup = true; //false or true
 
 //Weather settings
-$.location = "Krommenie, NH"; //city and region *required 
-$.country = "Netherlands"; //country *required 
+$.location = "Bad Neustadt a.d. Saale"; //city and region *required 
+$.country = "Germany"; //country *required 
 $.units = "metric"; //"metric" or "imperial" default: "auto"
 
 
 //Traffic settings
-$.Address = 'Krommenie, NL';
+$.Address = 'Bad Neustadt a.d. Saale';
 $.ZoomLevel = 10;
 
 
@@ -32,12 +32,12 @@ $.Traffic = true; //false or true
 // format: idx, value (from json), replace label, description, chart label, chart color
 $.PageDashboardArray = [
     //switches
-    ['163', 'Data', 'cell1', 'Lampen Uit', 'onbutton'],//onbutton = only push on
-    ['161', 'Data', 'cell2', 'Theme Logan', 'onbutton'],//button is normal on/off button
-    ['159', 'Data', 'cell3', 'Theme X-Men', 'onbutton'],
-    ['162', 'Data', 'cell4', 'Theme Aurora', 'onbutton'],
-    ['160', 'Data', 'cell5', 'Theme TitanFall', 'onbutton'],
-    ['158', 'Data', 'cell6', 'Theme SunSet', 'onbutton'],
+    ['12', 'Data', 'cell1', 'BoomBox', 'onbutton'], //onbutton = only push on
+    //['12', 'Data', 'cell2', 'Theme Logan', 'onbutton'],//button is normal on/off button
+    //['159', 'Data', 'cell3', 'Theme X-Men', 'onbutton'],
+    //['162', 'Data', 'cell4', 'Theme Aurora', 'onbutton'],
+    //['160', 'Data', 'cell5', 'Theme TitanFall', 'onbutton'],
+    //['158', 'Data', 'cell6', 'Theme SunSet', 'onbutton'],
     
 	// example for scenes & groups
 	//['1', 'Status', 'cell111', 'Group Example', 'group'],
@@ -45,19 +45,19 @@ $.PageDashboardArray = [
 	
 	
     //other devices
-    ['68', 'Humidity', 'cell7', 'Vocht Badkamer', 'badkamer', '#b2c831'],
-    ['68', 'LastUpdate', 'cell70', 'Vocht Badkamer'],
+    ['2', 'Temp', 'cell7', 'Outside FCastIO', 'badkamer', '#b2c831'],
+    ['2', 'LastUpdate', 'cell70', 'Vocht Badkamer'],
 
-    ['14', 'Temp', 'cell8', 'Temperatuur Woonkamer', 'woonkamer', '#2980B9'],
-    ['14', 'LastUpdate', 'cell80', 'Temperatuur Woonkamer'],
+    ['1', 'Temp', 'cell10', 'Temperature outside', 'woonkamer', '#2980B9'],
+    ['1', 'LastUpdate', 'cell100', 'RPi'],
 
-    ['58', 'Usage', 'cell9', 'Zonnepanelen (Watt)'],
-    ['58', 'Data', 'cell29', 'Zonnepanelen'],
-    ['58', 'CounterToday', 'cell39', 'Zonnepanelen'],
-    ['58', 'LastUpdate', 'cell19', 'Zonnepanelen'],
+    ['5', 'Usage', 'cell9', 'Zonnepanelen (Watt)'],
+    ['4', 'Data', 'cell29', 'Zonnepanelen'],
+    ['3', 'CounterToday', 'cell39', 'Zonnepanelen'],
+    ['2', 'LastUpdate', 'cell19', 'Zonnepanelen'],
 
-    ['47', 'Temp', 'cell10', 'Temperatuur Buiten', 'buiten', '#C0382B'],
-    ['47', 'LastUpdate', 'cell100', 'Temperatuur Buiten'],
+    ['2', 'Humidity', 'cell8', 'Humidity FCastIO', 'buiten', '#C0382B'],
+    ['2', 'LastUpdate', 'cell80	', '.'],
 
     ['53', 'Data', 'cell11', 'SabNZB Status'],
     ['57', 'Data', 'cell12', 'Plex Status'],
